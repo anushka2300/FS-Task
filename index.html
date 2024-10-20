@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="head">   <h1>Time Table of Section 3C</h1></div>
+ 
+    <table>
+        <thead>
+            <tr>
+                <th>Lecture #</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+            </tr>
+            <tr>
+                <th>Day/Time</th>
+                <th>08:00-09:00</th>
+                <th>09:00-10:00</th>
+                <th>10:00-11:00</th>
+                <th>11:00-12:00</th>
+                <th>12:00-01:00</th>
+                <th>01:00-02:00</th>
+                <th>02:00-03:00</th>
+                <th>03:00-04:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="Monday">
+                <th>Monday</th>
+                <td onclick="handleClick('PCPH0002')">
+                    <p>PCPH0002</p>
+                </td>
+                <td onclick="handleClick('BCSC0011')">
+                    <p>BCSC0011</p>
+                </td>
+                <td onclick="handleClick('BCSE1251')">
+                    <p>BCSE1251</p>
+                </td>
+                <td onclick="handleClick('BCSE0105')">
+                    <p>BCSE0105</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td onclick="handleClick('BCSE0281')">
+                    <p>BCSE0281</p>
+                </td>
+                <td onclick="handleClick('BCSE0281')">
+                    <p>BCSE0281</p>
+                </td>
+                <td  >
+                    <p></p>
+                </td>  
+            </tr>
+            <tr class="Tuesday">
+                <th>Tuesday</th>
+                <td onclick="handleClick('PQRH0002')">
+                    <p>PQRH0002</p>
+                </td>
+                <td onclick="handleClick('BCSC0011')">
+                    <p>BCSC0011</p>
+                </td>
+                <td onclick="handleClick('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+                <td onclick="handleClick('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td onclick="handleClick('BCSE1251')">
+                    <p>BCSE1251</p>
+                </td>
+                <td onclick="handleClick('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>  
+            </tr>
+            <tr class="wednesday">
+                <th>Wednesday</th>
+                <td onclick="handleClick('PCPH0002')">
+                    <p>PCPH0002</p>
+                </td>
+                <td onclick="handleClick('BCSE0105')">
+                    <p>BCSE0105</p>
+                </td>
+                <td onclick="handleClick('BCSE0022')">
+                    <p>BCSE0022</p>
+                </td>
+                <td onclick="handleClick('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td onclick="handleClick('BCSE0011')">
+                    <p>BCSE0011/3C3</p>
+                </td>
+                <td colspan="2" onclick="handleClick('BCSE0133')">
+                    <p>BCSE0133</p>
+                </td>
+                 
+            </tr>
+            <tr class="Thursday">
+                <th>Thursday</th>
+                <td colspan="2" style="text-align: center;" onclick="handleClick('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+                 
+                <td onclick="handleClick('BCSE0011')">
+                    <p>BCSE0011</p>
+                </td>
+                <td class="empty">
+                    <p> </p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td onclick="handleClick('BCSE0011')">
+                    <p>BCSE0011/3C1</p>
+                </td>
+                <td onclick="handleClick('BCSE1251')">
+                    <p>BCSE1251</p>
+                </td>
+                <td onclick="handleClick('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>  
+            </tr>
+            <tr class="friday">
+                <th>Friday</th>
+                <td onclick="handleClick('PQRH0011')">
+                    <p>PQRH0011</p>
+                </td>
+                <td onclick="handleClick('BCSC0105')">
+                    <p>BCSC0105</p>
+                </td>
+                <td onclick="handleClick('PVRH0001')">
+                    <p>PVRH0001</p>
+                </td>
+                <td onclick="handleClick('PGDH0001')">
+                    <p>PGDH0001</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td onclick="handleClick('BCSE0011')">
+                    <p>BCSE0011/3C2</p>
+                </td>
+                <td onclick="handleClick('BCSE0022')">
+                    <p>BCSE0022</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>  
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+<script>
+     const subjects = {
+        "PCPH0002": {
+            subject:"Competitive Programming",
+            facultyName: "Mr. Suresh Pratap Singh",
+            facultyContact: "9876354287"
+        },
+        "BCSE0011": {
+            Subject :"Theory Of Automata & Formal Languages" ,
+            facultyName: "Shubham Shukla",
+            facultyContact: "987-654-3210"
+        },
+        "BCSE1251": {
+            Subject :"Full Stack Using Scripting Technologies",
+            facultyName: "Shiv Kumar Verma",
+            facultyContact: "555-555-5555"
+        },
+        "BCSE0105": {
+            Subject : "Machine Learning",
+            facultyName: "Jagjeet Kumar ",
+            facultyContact: "456-789-1234"
+        },
+        "BCSE0281": {
+            Subject : "Full Stack Using Scripting Technologies Lab",
+            facultyName: "Shiv Kumar Verma ",
+            facultyContact: "321-654-9870"
+        },
+        "PQRH0002": {
+            Subject : "Logical Reasoning",
+            facultyName: "Ayush Gupta",
+            facultyContact: "888-888-8888"
+        },
+        "BCSE0812": {
+            Subject : "Analysis And Design Of Algorithm Lab",
+            facultyName: "Sohil Khan",
+            facultyContact: "222-222-2222"
+        },
+        "BCSE0053": {
+            Subject : "Agile Software Development",
+            facultyName: "Madhu Sudan Kumar",
+            facultyContact: "333-333-3333"
+        },
+        "BCSE0022": {
+            Subject : "Analysis And Design Of Algorithm",
+            facultyName: "Sohil Khan",
+            facultyContact: "444-444-4444"
+        },
+        "PVRH0001": {
+            Subject : "Verbal Aptitude",
+            facultyName: "Quazi Ziauddin",
+            facultyContact: "999-999-9999"
+        },
+        "PGDH0001": {
+            Subject : "Group Discussion & Personal Interview",
+            facultyName: "Anjali Mehra",
+            facultyContact: "111-111-1111"
+        }
+    };
+    function handleClick(subject){
+        const info=subjects[subject];
+        window.location.href=`description.html?course=${subject}`
+    }
+</script>
+</html>

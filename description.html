@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Subject Description</h1>
+    <div class="box">
+         
+        <p> Subject: <span id="#subjectName"></span> </p> 
+       
+        <p> Faculty:  <span id="#facultyName"> </span></p>
+       
+        <p> Contact: <span id="#contact"></span></p>
+    </div>
+
+   
+   
+</body>
+<script>
+    const subjects = {
+        "PCPH0002": {
+            Subject:"Competitive Programming",
+            facultyName: "Mr. Suresh Pratap Singh",
+            facultyContact: "9876354287"
+        },
+        "BCSC0011": {
+            Subject :"Theory Of Automata & Formal Languages" ,
+            facultyName: "Shubham Shukla",
+            facultyContact: "987-654-3210"
+        },
+        "BCSE1251": {
+            Subject :"Full Stack Using Scripting Technologies",
+            facultyName: "Shiv Kumar Verma",
+            facultyContact: "555-555-5555"
+        },
+        "BCSE0105": {
+            Subject : "Machine Learning",
+            facultyName: "Jagjeet Kumar ",
+            facultyContact: "456-789-1234"
+        },
+        "BCSE0281": {
+            Subject : "Full Stack Using Scripting Technologies Lab",
+            facultyName: "Shiv Kumar Verma ",
+            facultyContact: "321-654-9870"
+        },
+        "PQRH0002": {
+            Subject : "Logical Reasoning",
+            facultyName: "Ayush Gupta",
+            facultyContact: "888-888-8888"
+        },
+        "BCSE0812": {
+            Subject : "Analysis And Design Of Algorithm Lab",
+            facultyName: "Sohil Khan",
+            facultyContact: "222-222-2222"
+        },
+        "BCSE0053": {
+            Subject : "Agile Software Development",
+            facultyName: "Madhu Sudan Kumar",
+            facultyContact: "333-333-3333"
+        },
+        "BCSE0022": {
+            Subject : "Analysis And Design Of Algorithm",
+            facultyName: "Sohil Khan",
+            facultyContact: "444-444-4444"
+        },
+        "PVRH0001": {
+            Subject : "Verbal Aptitude",
+            facultyName: "Quazi Ziauddin",
+            facultyContact: "999-999-9999"
+        },
+        "PGDH0001": {
+            Subject : "Group Discussion & Personal Interview",
+            facultyName: "Anjali Mehra",
+            facultyContact: "111-111-1111"
+        }
+    };
+    
+const urlParams = new URLSearchParams(window.location.search);
+const info = urlParams.get('course');  
+const desc=subjects[info];
+console.log(desc);
+document.getElementById('#subjectName').innerText=desc.Subject;
+document.getElementById('#facultyName').innerText=desc.facultyName;
+document.getElementById('#contact').innerText=desc.facultyContact;
+</script>
+</html>
